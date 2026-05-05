@@ -1,0 +1,10 @@
+<section class="works">
+  <div class="container">
+    <app-section-title title="Our Works" subtitle="See our craftsmanship in action"></app-section-title>
+    <div class="works__grid">
+      <div class="works__item" *ngFor="let work of works">
+        <img [src]="work" [alt]="'Work ' + (works.indexOf(work) + 1)">
+      </div>
+    </div>
+  </div>
+</section>

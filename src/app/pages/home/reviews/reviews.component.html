@@ -1,0 +1,14 @@
+<section class="reviews">
+  <div class="container">
+    <app-section-title title="Customer Reviews" subtitle="What our customers say about us"></app-section-title>
+    <div class="reviews__grid">
+      <div class="reviews__card" *ngFor="let review of reviews">
+        <div class="reviews__rating">
+          <span *ngFor="let star of [].constructor(review.rating)">★</span>
+        </div>
+        <p class="reviews__text">{{ review.text }}</p>
+        <p class="reviews__name">- {{ review.name }}</p>
+      </div>
+    </div>
+  </div>
+</section>

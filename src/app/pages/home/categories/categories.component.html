@@ -1,0 +1,8 @@
+<section class="categories">
+  <div class="container">
+    <app-section-title title="Our Categories" subtitle="Explore our wide range of furniture collections"></app-section-title>
+    <div class="categories__grid">
+      <app-card *ngFor="let category of categories" [title]="category.title" [description]="category.description" [image]="category.image"></app-card>
+    </div>
+  </div>
+</section>

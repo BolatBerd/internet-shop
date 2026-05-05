@@ -1,0 +1,40 @@
+<header class="header">
+  <div class="container">
+    <div class="header__content">
+      <div class="header__logo">
+        <h1>{{ 'HEADER.TITLE' | translate }}</h1>
+      </div>
+      <nav class="header__nav">
+        <ul>
+          <li><a href="#home">{{ 'HEADER.HOME' | translate }}</a></li>
+          <li><a href="#about">{{ 'HEADER.ABOUT' | translate }}</a></li>
+          <li><a href="#categories">{{ 'HEADER.CATEGORIES' | translate }}</a></li>
+          <li><a href="#works">{{ 'HEADER.WORKS' | translate }}</a></li>
+          <li><a href="#reviews">{{ 'HEADER.REVIEWS' | translate }}</a></li>
+          <li><a href="#contact">{{ 'HEADER.CONTACT' | translate }}</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <div class="header__lang-switcher">
+          <button
+            type="button"
+            [class.active]="(currentLanguage$ | async) === 'ru'"
+            (click)="changeLanguage('ru')"
+          >
+            RU
+          </button>
+          <button
+            type="button"
+            [class.active]="(currentLanguage$ | async) === 'en'"
+            (click)="changeLanguage('en')"
+          >
+            EN
+          </button>
+        </div>
+        <div class="header__phone">
+          <span>{{ 'HEADER.PHONE' | translate }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

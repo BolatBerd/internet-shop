@@ -1,0 +1,29 @@
+.footer {
+  background: #f8f9fa;
+  padding: 2rem 0 1rem;
+  margin-top: 4rem;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__section h3, &__section h4 {
+    margin: 0 0 1rem 0;
+    color: var(--primary-color);
+  }
+
+  &__section p {
+    margin: 0.5rem 0;
+    color: var(--text-color);
+  }
+
+  &__bottom {
+    border-top: 1px solid #e9ecef;
+    padding-top: 1rem;
+    text-align: center;
+    color: #6c757d;
+  }
+}
