@@ -21,5 +21,21 @@
   "FOOTER.ADDRESS_TITLE": "Address",
   "FOOTER.ADDRESS_LINE1": "123 Furniture St",
   "FOOTER.ADDRESS_LINE2": "City, State 12345",
-  "FOOTER.COPYRIGHT": "© 2024 Custom Furniture. All rights reserved."
+  "FOOTER.COPYRIGHT": "© 2024 Custom Furniture. All rights reserved.",
+  "FLOATING_CONTACT.BUTTON": "Contact",
+  "FLOATING_CONTACT.TITLE": "Contact",
+  "FLOATING_CONTACT.CHOOSE_CHANNEL": "Choose a communication channel",
+  "FLOATING_CONTACT.COMPLETE_STEP": "Write a message for the selected channel",
+  "FLOATING_CONTACT.NAME_LABEL": "Your name",
+  "FLOATING_CONTACT.NAME_PLACEHOLDER": "Enter name (optional)",
+  "FLOATING_CONTACT.MESSAGE_LABEL": "Message",
+  "FLOATING_CONTACT.MESSAGE_PLACEHOLDER": "Write your message...",
+  "FLOATING_CONTACT.SEND_BUTTON": "Send",
+  "FLOATING_CONTACT.BACK": "Back",
+  "FLOATING_CONTACT.TELEGRAM": "Telegram",
+  "FLOATING_CONTACT.WHATSAPP": "WhatsApp",
+  "FLOATING_CONTACT.INSTAGRAM": "Instagram",
+  "FLOATING_CONTACT.VK": "VK",
+  "FLOATING_CONTACT.PHONE": "Phone",
+  "FLOATING_CONTACT.SMS": "SMS"
 }

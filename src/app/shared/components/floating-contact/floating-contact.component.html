@@ -1,0 +1,73 @@
+<div class="floating-contact">
+  <button type="button" class="floating-contact__trigger" (click)="openModal()" aria-label="{{ 'FLOATING_CONTACT.BUTTON' | translate }}">
+    <span class="pulse"></span>
+    <span class="wave"></span>
+    <span class="icon">
+      <ng-container [ngSwitch]="currentButtonIcon.id">
+        <svg *ngSwitchCase="'telegram'" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M2 12l6.8 2.4L22 4l-6 18L9.8 14.6 2 12z" fill="currentColor" />
+        </svg>
+        <svg *ngSwitchCase="'whatsapp'" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 2a10 10 0 0 0-3.1 19.4l-.7 2.4 2.5-.7A10 10 0 1 0 12 2zm1.4 15.3c-.2.5-.7.9-1.3 1-1.1.1-2.2-.2-3.1-.9l-.2-.2-1.8.5.5-1.8-.2-.2a8.6 8.6 0 0 1-1-3.1c0-2.3 1-4.5 2.6-6.1a6.8 6.8 0 0 1 4.8-2 6.9 6.9 0 0 1 5.8 3.5 8.7 8.7 0 0 1 .4 6.4 6.9 6.9 0 0 1-6.7 4.3 8.5 8.5 0 0 1-2.3-.3z" fill="currentColor" />
+        </svg>
+        <svg *ngSwitchCase="'instagram'" viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="4" y="4" width="16" height="16" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2" />
+          <circle cx="12" cy="12" r="3.5" fill="currentColor" />
+          <circle cx="17" cy="7" r="1" fill="currentColor" />
+        </svg>
+      </ng-container>
+    </span>
+  </button>
+</div>
+
+<div class="floating-contact__overlay" *ngIf="modalOpen">
+  <div class="floating-contact__backdrop" (click)="closeModal()"></div>
+  <div class="floating-contact__panel">
+    <div class="floating-contact__header">
+      <div>
+        <h3>{{ 'FLOATING_CONTACT.TITLE' | translate }}</h3>
+        <p>{{ selectedChannel ? ('FLOATING_CONTACT.COMPLETE_STEP' | translate) : ('FLOATING_CONTACT.CHOOSE_CHANNEL' | translate) }}</p>
+      </div>
+      <button type="button" class="close-button" (click)="closeModal()">×</button>
+    </div>
+
+    <div class="floating-contact__content">
+      <div *ngIf="!selectedChannel" class="channel-grid">
+        <button
+          type="button"
+          class="channel-card"
+          *ngFor="let channel of channels"
+          [style.borderColor]="channel.color"
+          (click)="selectChannel(channel.id)">
+          <span class="channel-card__icon" [style.background]="channel.color">{{ channel.id | uppercase }}</span>
+          <span>{{ channel.labelKey | translate }}</span>
+        </button>
+      </div>
+
+      <div *ngIf="selectedChannel" class="chat-panel">
+        <button type="button" class="back-button" (click)="selectedChannel = null">{{ 'FLOATING_CONTACT.BACK' | translate }}</button>
+        <div class="chat-header">
+          <span class="chat-icon"></span>
+          <div>
+            <h4>{{ getChannelLabel(selectedChannel) | translate }}</h4>
+            <p>{{ 'FLOATING_CONTACT.MESSAGE_SUBTITLE' | translate }}</p>
+          </div>
+        </div>
+
+        <label>
+          {{ 'FLOATING_CONTACT.NAME_LABEL' | translate }}
+          <input type="text" [(ngModel)]="name" placeholder="{{ 'FLOATING_CONTACT.NAME_PLACEHOLDER' | translate }}" />
+        </label>
+
+        <label>
+          {{ 'FLOATING_CONTACT.MESSAGE_LABEL' | translate }}
+          <textarea rows="4" [(ngModel)]="message" placeholder="{{ 'FLOATING_CONTACT.MESSAGE_PLACEHOLDER' | translate }}"></textarea>
+        </label>
+
+        <button class="send-button" type="button" [disabled]="!message.trim()" (click)="sendMessage()">
+          {{ 'FLOATING_CONTACT.SEND_BUTTON' | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
