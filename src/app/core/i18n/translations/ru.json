@@ -21,5 +21,21 @@
   "FOOTER.ADDRESS_TITLE": "Адрес",
   "FOOTER.ADDRESS_LINE1": "ул. Мебельная, 123",
   "FOOTER.ADDRESS_LINE2": "Город, Регион 12345",
-  "FOOTER.COPYRIGHT": "© 2024 Мебель на заказ. Все права защищены."
+  "FOOTER.COPYRIGHT": "© 2024 Мебель на заказ. Все права защищены.",
+  "FLOATING_CONTACT.BUTTON": "Связаться",
+  "FLOATING_CONTACT.TITLE": "Контакты",
+  "FLOATING_CONTACT.CHOOSE_CHANNEL": "Выберите канал связи",
+  "FLOATING_CONTACT.COMPLETE_STEP": "Напишите сообщение для выбранного канала",
+  "FLOATING_CONTACT.NAME_LABEL": "Ваше имя",
+  "FLOATING_CONTACT.NAME_PLACEHOLDER": "Введите имя (опционально)",
+  "FLOATING_CONTACT.MESSAGE_LABEL": "Сообщение",
+  "FLOATING_CONTACT.MESSAGE_PLACEHOLDER": "Напишите сообщение...",
+  "FLOATING_CONTACT.SEND_BUTTON": "Отправить",
+  "FLOATING_CONTACT.BACK": "Назад",
+  "FLOATING_CONTACT.TELEGRAM": "Telegram",
+  "FLOATING_CONTACT.WHATSAPP": "WhatsApp",
+  "FLOATING_CONTACT.INSTAGRAM": "Instagram",
+  "FLOATING_CONTACT.VK": "VK",
+  "FLOATING_CONTACT.PHONE": "Позвонить",
+  "FLOATING_CONTACT.SMS": "SMS"
 }

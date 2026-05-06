@@ -9,6 +9,7 @@ import { WorksComponent } from './works/works.component';
 import { AboutComponent } from './about/about.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { FloatingContactComponent } from '../../shared/components/floating-contact/floating-contact.component';
 
 @Component({
   selector: 'app-home',
@@ -23,7 +24,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     WorksComponent,
     AboutComponent,
     ReviewsComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    FloatingContactComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
