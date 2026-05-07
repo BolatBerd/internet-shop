@@ -22,4 +22,5 @@ export class HeaderComponent {
   changeLanguage(language: Language): void {
     this.translationService.switchLanguage(language);
   }
+
 }

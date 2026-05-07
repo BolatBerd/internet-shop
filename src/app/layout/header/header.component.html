@@ -17,6 +17,7 @@
          <div class="header__lang-switcher">
             <button
               type="button"
+              [class.hidden]="(currentLanguage$ | async) !== 'en'"
               [class.active]="(currentLanguage$ | async) === 'ru'"
               (click)="changeLanguage('ru')"
             >
@@ -24,6 +25,7 @@
             </button>
             <button
               type="button"
+              [class.hidden]="(currentLanguage$ | async) !== 'ru'"
               [class.active]="(currentLanguage$ | async) === 'en'"
               (click)="changeLanguage('en')"
             >
@@ -36,10 +38,10 @@
     <div class="header__line"></div>
 
     <div class="header__content">
-
+<!--
       <div class="header__logo">
         <h1>{{ 'HEADER.TITLE' | translate }}</h1>
-      </div>
+      </div> -->
       <nav class="header__nav">
         <ul>
           <li><a href="#home">{{ 'HEADER.HOME' | translate }}</a></li>

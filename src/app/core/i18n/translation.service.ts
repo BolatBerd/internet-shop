@@ -10,6 +10,9 @@ type Translations = Record<string, string>;
   providedIn: 'root'
 })
 export class TranslationService {
+  use(lang: string) {
+    throw new Error('Method not implemented.');
+  }
   private readonly fallbackTranslations: Translations = ruTranslations;
   private readonly translationStore: Record<Language, Translations> = {
     en: enTranslations,
