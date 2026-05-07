@@ -1,9 +1,17 @@
 .header {
   position: sticky;
   top: 0;
-  background: white;
+  background-color: var(--beckgrount-primary-grey);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 100;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
 
   &__content {
     display: flex;
@@ -12,14 +20,49 @@
     padding: 1rem 0;
   }
 
+  &__logo {
+    width: 220px;
+    object-fit: contain;
+  }
+
   &__logo h1 {
     margin: 0;
     font-size: 1.5rem;
     color: var(--primary-color);
   }
 
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  &__phone {
+    background: var(--beckgrount-bt-grey);
+    color: var(--beckgrount-bt-white);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 40px;
+    width: 340px;
+    padding: 15px 35px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .header__line {
+    width: 100%;
+    height: 1px;
+    background-color: #d7d7d7;
+    margin: 30px 0;
+  }
+
   &__nav ul {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     list-style: none;
     margin: 0;
     padding: 0;
@@ -30,15 +73,12 @@
     text-decoration: none;
     color: var(--text-color);
     transition: color 0.3s;
+    font-size: 22px;
+    font-weight: 500;
 
     &:hover {
       color: var(--primary-color);
     }
-  }
-
-  &__phone {
-    font-weight: bold;
-    color: var(--primary-color);
   }
 }
 
