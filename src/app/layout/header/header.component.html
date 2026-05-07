@@ -1,6 +1,42 @@
 <header class="header">
   <div class="container">
+    <div class="header__info">
+      <div class="header__address">
+        Тюмень, Федюнинского, 43 <br>
+        ТК "Орион" 1 уровень
+      </div>
+      <img
+        class="header__logo"
+        src="./img/erga_logo.png"
+        alt="erga_logo"
+      >
+      <div class="header__actions">
+        <button type="button" class="header__phone">
+          +7(3452)60-61-15
+        </button>
+         <div class="header__lang-switcher">
+            <button
+              type="button"
+              [class.active]="(currentLanguage$ | async) === 'ru'"
+              (click)="changeLanguage('ru')"
+            >
+              RU
+            </button>
+            <button
+              type="button"
+              [class.active]="(currentLanguage$ | async) === 'en'"
+              (click)="changeLanguage('en')"
+            >
+              EN
+            </button>
+          </div>
+      </div>
+    </div>
+
+    <div class="header__line"></div>
+
     <div class="header__content">
+
       <div class="header__logo">
         <h1>{{ 'HEADER.TITLE' | translate }}</h1>
       </div>
@@ -14,27 +50,11 @@
           <li><a href="#contact">{{ 'HEADER.CONTACT' | translate }}</a></li>
         </ul>
       </nav>
-      <div class="header__actions">
-        <div class="header__lang-switcher">
-          <button
-            type="button"
-            [class.active]="(currentLanguage$ | async) === 'ru'"
-            (click)="changeLanguage('ru')"
-          >
-            RU
-          </button>
-          <button
-            type="button"
-            [class.active]="(currentLanguage$ | async) === 'en'"
-            (click)="changeLanguage('en')"
-          >
-            EN
-          </button>
-        </div>
+      <!-- <div class="header__actions">
         <div class="header__phone">
           <span>{{ 'HEADER.PHONE' | translate }}</span>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </header>
