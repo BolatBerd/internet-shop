@@ -2,8 +2,18 @@
   <div class="container">
     <div class="hero__content">
       <h1 class="hero__title">{{ 'HERO.TITLE' | translate }}</h1>
-      <p class="hero__subtitle">{{ 'HERO.SUBTITLE' | translate }}</p>
-      <app-button [text]="'HERO.BUTTON' | translate" type="primary"></app-button>
+      <div class="hero__info">
+        <p class="hero__subtitle">{{ 'HERO.SUBTITLE' | translate }}</p>
+        <span class="hero__prise">от 110 000 руб.</span>
+      </div>
+      <app-button
+        class="hero__btn-calculate-cost"
+        type="primary"
+        [text]="'HERO.BUTTON' | translate"
+        (click)="openFloatingContact()"
+      >
+      </app-button>
     </div>
+    <app-floating-contact></app-floating-contact>
   </div>
 </section>
