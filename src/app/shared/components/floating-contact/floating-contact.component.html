@@ -1,10 +1,12 @@
 <div class="floating-contact">
-  <button type="button" class="floating-contact__trigger" (click)="openModal()" aria-label="{{ 'FLOATING_CONTACT.BUTTON' | translate }}">
+  <button type="button" class="floating-contact__trigger"
+    (clickOpenModal)="openModal()"
+   (click)="openModal()" aria-label="{{ 'FLOATING_CONTACT.BUTTON' | translate }}">
     <span class="pulse"></span>
     <span class="wave"></span>
     <span class="icon">
       <ng-container [ngSwitch]="currentButtonIcon.id">
-        <svg *ngSwitchCase="'telegram'" viewBox="0 0 24 24" aria-hidden="true">
+          <svg *ngSwitchCase="'telegram'" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M2 12l6.8 2.4L22 4l-6 18L9.8 14.6 2 12z" fill="currentColor" />
         </svg>
         <svg *ngSwitchCase="'whatsapp'" viewBox="0 0 24 24" aria-hidden="true">

@@ -1,5 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output, output } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FloatingContactComponent } from '../floating-contact/floating-contact.component';
+
 
 @Component({
   selector: 'app-button',
@@ -11,4 +13,10 @@ import { CommonModule } from '@angular/common';
 export class ButtonComponent {
   @Input() text = '';
   @Input() type: 'primary' | 'secondary' = 'primary';
+  // @Output() clickOpenModal = new EventEmitter<void>();
+
+  // openModal(): void {
+  //   this.clickOpenModal.emit();
+  // }
 }
+
