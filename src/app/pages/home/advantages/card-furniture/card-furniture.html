@@ -1,0 +1,25 @@
+<div class="cards-grid">
+  @for (card of cards ; track card.id) {
+    <div class="card-furniture">
+      <img
+        [src]="`./assets/images/${card.img}.jpg`"
+        alt="{{ card.title }}"
+        class="card-furniture__image"
+      >
+      <div class="card-furniture__content">
+        <h3 class="card-furniture__title">
+          {{ card.title }}
+        </h3>
+        <p class="card-furniture__description">
+          {{ card.description }}
+        </p>
+        @if (card.salse) {
+        <span class="card-furniture__sales">
+          {{ card.salse }}%
+        </span>
+      }
+      </div>
+      <button class="card-furniture__btn">Подробнее</button>
+    </div>
+  }
+</div>

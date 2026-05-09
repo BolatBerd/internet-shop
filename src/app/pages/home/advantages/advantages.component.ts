@@ -4,13 +4,15 @@ import { SectionTitleComponent } from '../../../shared/components/section-title/
 import { CardComponent } from '../../../shared/components/card/card.component';
 import { Advantage } from '../../../core/models';
 import { DataService } from '../../../core/services/data.service';
+import { CardFurniture } from './card-furniture/card-furniture';
+import { TranslatePipe } from '../../../core/i18n/translate.pipe';
 
 @Component({
   selector: 'app-advantages',
   standalone: true,
-  imports: [CommonModule, SectionTitleComponent, CardComponent],
+  imports: [CommonModule, SectionTitleComponent, CardFurniture, TranslatePipe],
   templateUrl: './advantages.component.html',
-  styleUrl: './advantages.component.scss'
+  styleUrls: ['./advantages.component.scss'],
 })
 export class AdvantagesComponent {
   private dataService = inject(DataService);
