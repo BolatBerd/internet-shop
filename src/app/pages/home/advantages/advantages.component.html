@@ -1,8 +1,10 @@
 <section class="advantages">
   <div class="container">
-    <app-section-title title="Why Choose Us" subtitle="Discover what makes our furniture stand out"></app-section-title>
-    <div class="advantages__grid">
-      <app-card *ngFor="let advantage of advantages" [title]="advantage.title" [description]="advantage.description"></app-card>
-    </div>
+    <app-section-title
+      title="{{ 'SECTION.TITLE' | translate }}"
+      subtitle="Узнайте, что отличает нашу мебель от других."
+    >
+    </app-section-title>
   </div>
+  <app-card-furniture></app-card-furniture>
 </section>
