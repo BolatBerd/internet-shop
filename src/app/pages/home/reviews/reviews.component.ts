@@ -9,9 +9,11 @@ import { DataService } from '../../../core/services/data.service';
   standalone: true,
   imports: [CommonModule, SectionTitleComponent],
   templateUrl: './reviews.component.html',
-  styleUrl: './reviews.component.scss'
+  styleUrls: ['./reviews.component.scss']
 })
 export class ReviewsComponent {
   private dataService = inject(DataService);
   reviews: Review[] = this.dataService.getReviews();
 }
+
+

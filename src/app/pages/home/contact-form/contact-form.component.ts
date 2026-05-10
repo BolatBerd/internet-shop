@@ -11,7 +11,7 @@ import { Contact } from '../../../core/models';
   standalone: true,
   imports: [CommonModule, FormsModule, SectionTitleComponent, ButtonComponent, TranslatePipe],
   templateUrl: './contact-form.component.html',
-  styleUrl: './contact-form.component.scss'
+  styleUrls: ['./contact-form.component.scss']
 })
 export class ContactFormComponent {
   contact: Contact = {
@@ -24,3 +24,5 @@ export class ContactFormComponent {
     // Handle form submission
   }
 }
+
+

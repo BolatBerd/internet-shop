@@ -10,7 +10,7 @@ import { Language } from '../../core/i18n/language.types';
   standalone: true,
   imports: [CommonModule, AsyncPipe, TranslatePipe],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
   currentLanguage$!: Observable<Language>;
@@ -24,3 +24,5 @@ export class HeaderComponent {
   }
 
 }
+
+

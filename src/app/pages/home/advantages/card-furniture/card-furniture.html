@@ -1,8 +1,14 @@
 <div class="cards-grid">
   @for (card of cards ; track card.id) {
-    <div class="card-furniture">
+    <div
+      class="card-furniture"
+      (mouseenter)="card.isHover = true"
+      (mouseleave)="card.isHover = false">
       <img
-        [src]="`./assets/images/${card.img}.jpg`"
+        [src]="card.isHover
+        ? `./assets/images/${card.img_ALL}.jpg`
+        : `./assets/images/${card.img}.jpg`"
+
         alt="{{ card.title }}"
         class="card-furniture__image"
       >

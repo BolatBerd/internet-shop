@@ -28,8 +28,10 @@ import { FloatingContactComponent } from '../../shared/components/floating-conta
     FloatingContactComponent
   ],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
 
 }
+
+

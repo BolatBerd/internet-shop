@@ -7,8 +7,10 @@ import { SectionTitleComponent } from '../../../shared/components/section-title/
   standalone: true,
   imports: [CommonModule, SectionTitleComponent],
   templateUrl: './about.component.html',
-  styleUrl: './about.component.scss'
+  styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
 
 }
+
+

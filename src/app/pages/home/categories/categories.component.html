@@ -1,8 +1,85 @@
 <section class="categories">
-  <div class="container">
-    <app-section-title title="Our Categories" subtitle="Explore our wide range of furniture collections"></app-section-title>
-    <div class="categories__grid">
-      <app-card *ngFor="let category of categories" [title]="category.title" [description]="category.description" [image]="category.image"></app-card>
+
+  <app-section-title
+    title="Преимущества диванов"
+    subtitle="Explore our wide range of furniture collections"
+  >
+  </app-section-title>
+
+  <div class="categories__slider">
+
+    <button
+      class="categories__btn categories__btn--prev"
+      (click)="nextSlide()"
+
+    >
+      ←
+    </button>
+
+    <div class="categories__wrapper">
+
+      <div
+         class="categories__click-area categories__click-area--left"
+
+           (click)="nextSlide()"
+
+           >
+          </div>
+
+          <div
+          class="categories__click-area categories__click-area--right"
+
+
+          (click)="prevSlide()"
+      >
+      </div>
+
+      <div
+        class="categories__track"
+
+        [style.transform]="'translateX(-' + currentIndex * cardWidth + 'px)'"
+      >
+
+        @for (category of categories; track category.id) {
+
+          <div class="card">
+
+            <div class="card__image">
+
+              <img
+                [src]="category.image"
+                [alt]="category.title"
+              >
+
+            </div>
+
+            <div class="card__content">
+
+              <h3 class="card__title">
+                {{ category.title }}
+              </h3>
+
+              <p class="card__description">
+                {{ category.description }}
+              </p>
+
+            </div>
+
+          </div>
+
+        }
+
+      </div>
+
     </div>
+
+    <button
+      class="categories__btn categories__btn--next"
+      (click)="prevSlide()"
+    >
+      →
+    </button>
+
   </div>
+
 </section>

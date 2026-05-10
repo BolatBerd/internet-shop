@@ -10,7 +10,7 @@
   border-radius: 0.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  height: 750px;
+  height: 820px;
   width: 500px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
@@ -55,7 +55,7 @@
     top: 4px;
     right: 4px;
     margin: 1rem;
-    padding: 15px 8px;
+    padding: 15px 10px;
     background-color: var(--secondary-color);
     color: white;
     border: none;
@@ -64,6 +64,8 @@
   }
 
   &__btn {
+    position: absolute;
+    bottom: 15px;
     margin: 1rem;
     padding: 0.5rem 1rem;
     background-color: var(--beckgrount-bt-grey);

@@ -8,7 +8,7 @@ import { FloatingContactComponent } from '../floating-contact/floating-contact.c
   standalone: true,
   imports: [CommonModule],
   templateUrl: './button.component.html',
-  styleUrl: './button.component.scss'
+  styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent {
   @Input() text = '';
@@ -19,4 +19,6 @@ export class ButtonComponent {
   //   this.clickOpenModal.emit();
   // }
 }
+
+
 
