@@ -8,9 +8,11 @@ import { DataService } from '../../../core/services/data.service';
   standalone: true,
   imports: [CommonModule, SectionTitleComponent],
   templateUrl: './works.component.html',
-  styleUrl: './works.component.scss'
+  styleUrls: ['./works.component.scss']
 })
 export class WorksComponent {
   private dataService = inject(DataService);
   works: string[] = this.dataService.getWorks();
 }
+
+

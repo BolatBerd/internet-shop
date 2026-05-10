@@ -9,7 +9,7 @@ import { FloatingContactComponent } from '../../../shared/components/floating-co
   standalone: true,
   imports: [CommonModule, ButtonComponent, TranslatePipe, FloatingContactComponent],
   templateUrl: './hero.component.html',
-  styleUrl: './hero.component.scss'
+  styleUrls: ['./hero.component.scss']
 })
 export class HeroComponent {
 
@@ -21,3 +21,5 @@ export class HeroComponent {
   }
 
 }
+
+
