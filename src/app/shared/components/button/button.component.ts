@@ -13,6 +13,7 @@ import { FloatingContactComponent } from '../floating-contact/floating-contact.c
 export class ButtonComponent {
   @Input() text = '';
   @Input() type: 'primary' | 'secondary' = 'primary';
+  @Input() disabled = false;
   // @Output() clickOpenModal = new EventEmitter<void>();
 
   // openModal(): void {

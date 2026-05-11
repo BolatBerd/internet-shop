@@ -33,3 +33,22 @@
     gap: 2rem;
   }
 }
+
+.showroom {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+
+  &__map {
+    width: 700px;
+    height: 430px;
+    overflow: hidden;
+    border-radius: 20px;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  }
+}

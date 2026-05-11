@@ -1,3 +1,7 @@
-<button class="btn"  [ngClass]="'btn--' + type">
+<button
+  class="btn"
+  [ngClass]="'btn--' + type"
+  [disabled]="disabled"
+>
   {{ text }}
 </button>

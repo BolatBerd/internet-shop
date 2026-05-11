@@ -2,7 +2,11 @@
   <div class="container">
     <app-section-title [title]="'CONTACT.TITLE' | translate" [subtitle]="'CONTACT.SUBTITLE' | translate"></app-section-title>
     <div class="contact-form__content">
-      <form class="contact-form__form" (ngSubmit)="onSubmit()">
+      <form
+        class="contact-form__form"
+        (ngSubmit)="onSubmit()"
+        #form="ngForm"
+      >
         <div class="contact-form__group">
           <label for="name">{{ 'CONTACT.LABEL_NAME' | translate }}</label>
           <input type="text" id="name" [(ngModel)]="contact.name" name="name" required>
@@ -11,7 +15,12 @@
           <label for="phone">{{ 'CONTACT.LABEL_PHONE' | translate }}</label>
           <input type="tel" id="phone" [(ngModel)]="contact.phone" name="phone" required>
         </div>
-        <app-button [text]="'CONTACT.BUTTON' | translate" type="primary"></app-button>
+        <app-button
+          [text]="'CONTACT.BUTTON' | translate"
+          type="primary"
+          [disabled]="!!form.invalid"
+        >
+      </app-button>
       </form>
     </div>
   </div>
