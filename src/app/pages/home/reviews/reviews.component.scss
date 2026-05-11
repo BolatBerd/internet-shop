@@ -1,6 +1,7 @@
 .reviews {
   padding: 4rem 0;
   background: #f8f9fa;
+  position: relative;
 
   &__grid {
     display: grid;
@@ -10,7 +11,7 @@
 
   &__card {
     background: white;
-    padding: 2rem;
+    padding: 2rem 2rem 4rem 2rem;
     border-radius: 0.5rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -30,8 +31,10 @@
   }
 
   &__name {
+    position: absolute;
     margin: 0;
     font-weight: bold;
     color: var(--primary-color);
+    bottom: 85px;
   }
 }

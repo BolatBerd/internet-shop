@@ -6,7 +6,7 @@ import { DataService } from '../../../core/services/data.service';
 @Component({
   selector: 'app-works',
   standalone: true,
-  imports: [CommonModule, SectionTitleComponent],
+  imports: [CommonModule],
   templateUrl: './works.component.html',
   styleUrls: ['./works.component.scss']
 })

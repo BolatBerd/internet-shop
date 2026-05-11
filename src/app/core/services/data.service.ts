@@ -101,18 +101,18 @@ export class DataService {
   getReviews(): Review[] {
     return [
       {
-        name: 'Sarah Johnson',
-        text: 'Absolutely love my new dining set! The quality is outstanding and it fits perfectly in our home.',
+        name: 'Сара Джонсон',
+        text: 'Я в полном восторге от своего нового обеденного гарнитура! Качество превосходное, и он идеально вписывается в наш дом.',
         rating: 5
       },
       {
-        name: 'Mike Chen',
-        text: 'Great customer service and beautiful craftsmanship. Highly recommend this furniture store.',
-        rating: 5
+        name: 'Майк Чен',
+        text: 'Отличное обслуживание клиентов и прекрасное качество изготовления. Настоятельно рекомендую этот мебельный магазин.',
+        rating: 4
       },
       {
-        name: 'Emily Davis',
-        text: 'The bedroom furniture I purchased exceeded my expectations. Comfortable and stylish!',
+        name: 'Эмили Дэвис',
+        text: 'Приобретенная мной мебель для спальни превзошла все мои ожидания. Удобная и стильная!',
         rating: 5
       }
     ];

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { SectionTitleComponent } from '../../../shared/components/section-title/section-title.component';
@@ -18,6 +18,8 @@ export class ContactFormComponent {
     name: '',
     phone: ''
   };
+
+  @Input() disabled = false;
 
   onSubmit() {
     console.log('Contact form submitted:', this.contact);
